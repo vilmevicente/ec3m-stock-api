@@ -8,7 +8,7 @@ import bodyParser from "body-parser";
 
 //! Variáveis e inicialização de módulos.
 dotenv.config()
-const port = 8000;
+const port = process.env.PORT || 3000;
 const app = express();
 app.use(bodyParser.json())
 app.use(initRoutes);
