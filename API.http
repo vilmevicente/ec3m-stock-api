@@ -1,0 +1,32 @@
+//! Consultar produtos 
+GET http://localhost:8000/product
+content-type: application/json
+
+{
+
+}
+
+###
+//! Adicionar produtos no stock
+POST http://localhost:8000/product/stock HTTP/1.1
+content-type: application/json
+
+{
+    "product_id":102972008,
+    "amount":80,
+    "type":"0",
+    "store_id":0,
+    "stockAlert":10,
+    "obs":"Este produto jamais deve se esgotae por ser muito solicitado"
+}
+
+
+###
+//! consultar produtos no  stock
+GET http://localhost:8000/product/stock/102972008 HTTP/1.1
+
+
+###
+//! Remover produto do stock OBS: Após o pagamento
+GET http://localhost:8000/product/stock/retirar/102972008/50 HTTP/1.1
+

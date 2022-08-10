@@ -1,0 +1,16 @@
+{
+    "type": "mysql",
+    "host": "sql.freedb.tech",
+    "port": 3306,
+    "username": "freedb_vilmenolimits",
+    "password": "#bSbtzSUxS&ENy4",
+    "database": "freedb_vilmenolimits",
+    "entities": ["src/entities/*.ts"],
+    "migrations": ["src/database/migrations/*.ts"],
+    "logging": true,
+    "synchronize": true,
+    "cli":{
+        "entitiesDir":"src/entities",
+        "migrationsDir":"src/database/migrations"
+    }
+  }
